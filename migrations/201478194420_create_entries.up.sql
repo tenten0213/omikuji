@@ -1,0 +1,6 @@
+CREATE TABLE entries (
+    
+    name VARCHAR(16), 
+    title VARCHAR(30), 
+    id INTEGER GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1)
+);

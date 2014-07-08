@@ -1,0 +1,29 @@
+{
+	"baseName": "omikuji",
+	"entities": [
+		{
+			"name": "entry",
+			"attrs": [
+				{
+					"attrName": "name",
+					"attrType": "String",
+					"attrImplType": "VARCHAR",
+					"minLength": "1",
+					"maxLength": "16",
+					"enumValues": [],
+					"required": true
+				},
+				{
+					"attrName": "title",
+					"attrType": "String",
+					"attrImplType": "VARCHAR",
+					"minLength": "1",
+					"maxLength": "30",
+					"enumValues": [],
+					"required": true
+				}
+			]
+		}
+	],
+	"resources": []
+}
