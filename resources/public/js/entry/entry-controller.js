@@ -11,6 +11,17 @@ angular.module('omikuji')
         $scope.open();
       };
 
+        $scope.roulette = function () {
+            var i = resolvedEntry.length;
+            while(i) {
+                var j = Math.floor(Math.random() * i);
+                var t = $scope.entries[--i];
+                $scope.entries[i] = $scope.entries[j];
+                $scope.entries[j] = t;
+            }
+            return $scope.entries;
+        };
+
       $scope.update = function (id) {
         $scope.entry = Entry.get({id: id});
         $scope.open(id);
