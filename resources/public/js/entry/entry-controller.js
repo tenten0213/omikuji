@@ -12,7 +12,7 @@ angular.module('omikuji')
       };
 
         $scope.roulette = function () {
-            var i = resolvedEntry.length;
+            var i = $scope.entries.length;
             while(i) {
                 var j = Math.floor(Math.random() * i);
                 var t = $scope.entries[--i];
