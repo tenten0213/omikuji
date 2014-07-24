@@ -75,21 +75,21 @@
             </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="entry in entries">
-                <td>{{entry.id}}</td>
+            <tr ng-repeat="entryObject in randomEntries| orderBy:'rank'">
+                <td>{{entryObject.entry.id}}</td>
                 
-                <td>{{entry.name }}</td>
+                <td>{{entryObject.entry.name }}</td>
                 
-                <td>{{entry.title }}</td>
+                <td>{{entryObject.entry.title }}</td>
                 
                 <td>
                     <button type="submit"
-                            ng-click="update(entry.id)"
+                            ng-click="update(entryObject.entry.id)"
                             class="btn">
                         <span class="glyphicon glyphicon-pencil"></span> Edit
                     </button>
                     <button type="submit"
-                            ng-click="delete(entry.id)"
+                            ng-click="delete(entryObject.entry.id)"
                             class="btn btn-danger">
                         <span class="glyphicon glyphicon-remove-circle"></span> Delete
                     </button>
