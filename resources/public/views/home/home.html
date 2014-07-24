@@ -3,10 +3,34 @@
         <div class="col-md-8">
             <h1>Welcome to Omikuji!</h1>
             <p class="lead">This is your homepage, ready for editing</p>
+            <button class="btn btn-warning btn-lg" ng-click="roulette()">
+                <span class="glyphicon glyphicon-star" ></span> Roulette
+            </button>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        
+                        <th>name</th>
+                        
+                        <th>title</th>
+                        
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="entry in entries">
+                        <td>{{entry.id}}</td>
+                        
+                        <td>{{entry.name }}</td>
+                        
+                        <td>{{entry.title }}</td>
+                        
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
 
-            <p>
-             <span translate="main.like">If you like this Angular-Luminus generator, please give us a star at </span>&nbsp;<a href="https://github.com/rayokota/generator-angular-luminus" target="_blank" translate="main.github">Github</a>!
-            </p>
         </div>
     </div>
 </div>
