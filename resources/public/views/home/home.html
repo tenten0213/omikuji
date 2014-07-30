@@ -1,30 +1,25 @@
-<div class="container-fluid">
-        <button class="btn btn-warning btn-lg" ng-click="roulette()">
-            <span class="glyphicon glyphicon-star" ></span> Roulette
-        </button>
+<button class="btn btn-warning btn-lg" ng-click="roulette()">
+    <span class="glyphicon glyphicon-star"></span> Roulette
+</button>
+<img src="../img/matsurineko.png" width="35" height="40" class="neko" ng-click="nekohide()">
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>ID</th>
+
+            <th>name</th>
+
+            <th>title</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="line in lines" class="entry-list" ng-show="tableshow">
+            <td>{{entry.id}}</td>
+            <td>{{entry.name}}</td>
+            <td>{{entry.title}}</td>
+        </tr>
+        </tbody>
+    </table>
 </div>
-   <div class="table-responsive">
-        <table class="table table-striped">
-            <thead>
-            <tr>
-                <th>ID</th>
-
-                <th>name</th>
-
-                <th>title</th>
-
-            </tr>
-            </thead>
-            <tbody>
-            <tr ng-repeat="entry in entries">
-                <td>{{entry.id}}</td>
-
-                <td>{{entry.name }}</td>
-
-                <td>{{entry.title }}</td>
-
-                </td>
-            </tr>
-            </tbody>
-        </table>
-   </div>
