@@ -9,16 +9,20 @@ angular.module('omikuji')
             $scope.roulette = function () {
                 $scope.entries = _.shuffle($scope.entries);
                 angular.forEach($scope.entries, function (entry, key) {
-                        $scope.lines.push(entry)
+                        setTimeout(function () {
+                            $scope.lines.push(entry)
+                        }, 3);
                     }
-                );
+                )
+                ;
             };
 
             $scope.nekohide = function () {
-                angular.forEach($scope.lines, function (value, key) {
+                angular.forEach($scope.lines, function (line, key) {
                     setTimeout(function () {
-                        $scope.lines.pop(value)
+                        $scope.lines.pop(line)
                     }, 3);
                 });
             }
-        }]);
+        }])
+;
