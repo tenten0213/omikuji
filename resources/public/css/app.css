@@ -3,3 +3,32 @@ body {
   padding: 10px;
   background-color: #ECF0F1;
 }
+
+.neko {
+    margin-left: 15px;
+}
+
+.entry-list.ng-enter {
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    top: -100px;
+    opacity: 0;
+}
+
+.entry-list.ng-enter-active {
+    top: 0px;
+    opacity: 1;
+}
+
+.entry-list.ng-leave {
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    top: 0px;
+    opacity: 1;
+}
+
+.entry-list.ng-leave-active {
+    top: -100px;
+    opacity: 0.5;
+}
+

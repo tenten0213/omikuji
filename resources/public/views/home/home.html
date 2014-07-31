@@ -1,12 +1,25 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-8">
-            <h1>Welcome to Omikuji!</h1>
-            <p class="lead">This is your homepage, ready for editing</p>
+<button class="btn btn-warning btn-lg" ng-click="roulette()">
+    <span class="glyphicon glyphicon-star"></span> Roulette
+</button>
+<img src="../img/matsurineko.png" width="35" height="40" class="neko" ng-click="nekohide()">
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>ID</th>
 
-            <p>
-             <span translate="main.like">If you like this Angular-Luminus generator, please give us a star at </span>&nbsp;<a href="https://github.com/rayokota/generator-angular-luminus" target="_blank" translate="main.github">Github</a>!
-            </p>
-        </div>
-    </div>
+            <th>name</th>
+
+            <th>title</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="line in lines" class="entry-list">
+            <td>{{line.id}}</td>
+            <td>{{line.name}}</td>
+            <td>{{line.title}}</td>
+        </tr>
+        </tbody>
+    </table>
 </div>
