@@ -15,10 +15,10 @@
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="line in lines" class="entry-list">
-            <td>{{line.id}}</td>
-            <td>{{line.name}}</td>
-            <td>{{line.title}}</td>
+        <tr ng-repeat="entry in entries | orderBy:'rank'" class="animate-repeat">
+            <td>{{entry.id}}</td>
+            <td>{{entry.name}}</td>
+            <td>{{entry.title}}</td>
         </tr>
         </tbody>
     </table>
